@@ -59,15 +59,25 @@ int main(void) {
 	//signal(SIGINT,)
 	//signal(SIGTERM,)
 	
-	//read first char from stdin
-	//while char isn't EOF
-	//add to histogram
-	//get new char
-	//
-	//if output_histogram==0 then return 0
-	//else return -1
+	//ssize_t bytes_read;
+	char current_char;
+	//might need to change for error handling of read
+	while(read(0,&current_char,1)>0){
+		histogram[(unsigned int)current_char] += 1;
+	}
 	
-	
+	/*	
+	do{
+		bytes_read read()
+		if(bytes_read=-1){
+			//print error with errno
+		}
+		else if(bytes_read !=0){
+			
+		}
+	}while(bytes_read != 0);
+	*/
+
 	output_histogram(stdout);
 	return 0;
 }
