@@ -1,9 +1,33 @@
+/*
+ * DISCLAIMER:
+ * This program was developed as part of a university course project
+ * The project requirements and instructions are outlined in the README file of this project
+ * This program demonstrates understanding in basic C conecpts, I/O, CLI argument parsing, and signal handling
+ * All implementation, logic, and code structure are my own work.
+ *
+ * This program takes text from stdin who's characters will be organized into a histogram
+ * The output is a text representaion of a histogram that shows the distribution of ascii characters in stdin
+ * Further details can be found in README
+ *
+ * Psuedo code:
+ * Main:
+ * 	reads each byte from stdin
+ *	increaments value in histogram array at index of ascii value read
+ *	outputs histogram with bars proportional to longest bar
+ *
+ * if signal is recieved:
+ * 	current state of histogram is output
+ * 	failure exit status if sigint or sigterm
+*/
+
+
 #include "histogram.h"
 #include <stdio.h>
 #include <signal.h>
 #include <errno.h>
 #include <unistd.h>
 #include <stdlib.h>
+
 
 int get_bar_proportion();
 int output_histogram(FILE* out);
@@ -57,7 +81,7 @@ int output_histogram(FILE* out){
 }
 
 void signal_handler(int signum){
-	
+	//writes the state of the histogram to the output file at the time of the signal
 	FILE* output = fopen("histo.out","w");
 	output_histogram(output);
 	fclose(output);
