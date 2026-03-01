@@ -1,5 +1,35 @@
-# histogram Programming Assignment
+# Histogram Programming Assignment
+This is a CLI program that takes ascii text input and outputs a histogram with the distribution of ascii characters/byte values . This project is written in C and uses only standard libraries.
+## Requirements
+- C compiler (gcc or equivalent)
+No external libraries are required
+## Installation
+Clone the repository:
+Open a terminal and navigate to the file where you want to clone this project using.
+```bash
+cd FILE_PATH
+```
+Once in the correct directory clone the repository.
+```bash
+git clone https://github.com/mfrayne/histogram.git
+```
+## Running
+Compile the program:
+```bash
+gcc highlighter.c -o highlighter
+```
+Run the executable:
+```bash
+./highlighter [-h] [-i INPUT] [-o OUTPUT] [-c {RED,GREEN,BLUE,YELLOW,MAGENTA,CYAN,WHITE}] [--no-color] [--prefix PREFIX] [--postfix POSTFIX] text
+```
+Additional information about flags can be found in the help menu using the -h flag
 
+
+## Attribution
+This project was originally developed as a course project for PSU CMPSC 311
+The following in the description provided for the assignment
+
+# Given Assignment Instructions
 In this assignment, you are going to implement your own CLI program called `histogram` which utilizes signal handling, file I/O, and continuous input processing in C and Linux/Unix. You'll get experience using signal handlers, file descriptors or streams, byte-level I/O, and error handling.
 
 ## Accepting the Assignment
