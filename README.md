@@ -16,11 +16,11 @@ git clone https://github.com/mfrayne/histogram.git
 ## Running
 Compile the program:
 ```bash
-gcc highlighter.c -o highlighter
+gcc histogram.c -o histogram
 ```
 Run the executable:
 ```bash
-./highlighter [-h] [-i INPUT] [-o OUTPUT] [-c {RED,GREEN,BLUE,YELLOW,MAGENTA,CYAN,WHITE}] [--no-color] [--prefix PREFIX] [--postfix POSTFIX] text
+./highlighter
 ```
 Additional information about flags can be found in the help menu using the -h flag
 
